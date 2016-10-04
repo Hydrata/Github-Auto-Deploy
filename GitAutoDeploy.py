@@ -95,6 +95,10 @@ class GitAutoDeploy(BaseHTTPRequestHandler):
                         if(not self.quiet):
                             print 'Executing deploy command'
                         call(['cd "' + path + '" && ' + repository['deploy']], shell=True)
+                        output=$(call(['cd "' + path + '" && ' + repository['deploy']], shell=True))
+                        echo 'output is $output'
+                        echo output
+                        print 'Deploy command done'
                         
                     elif not self.quiet:
                         print 'Push to different branch (%s != %s), not deploying' % (branch, self.branch)
