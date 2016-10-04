@@ -1,0 +1,9 @@
+{
+	"port": 8001, 
+	"repositories": 
+	[{
+		"url": "https://github.com/Hydrata/ChennaiFloodModel", 
+		"path": "/home/ubuntu/anuganode/tasks/gitrepos",
+		"deploy": "echo deploying ChennaiFloodModel"
+	}]
+}
