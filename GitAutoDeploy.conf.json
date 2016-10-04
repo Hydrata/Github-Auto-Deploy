@@ -4,6 +4,6 @@
 	[{
 		"url": "https://github.com/Hydrata/ChennaiFloodModel", 
 		"path": "/home/ubuntu/anuganode/tasks/gitrepos",
-		"deploy": "echo deploying ChennaiFloodModel"
+		"deploy": "sudo /etc/init.d/celeryd restart"
 	}]
 }
