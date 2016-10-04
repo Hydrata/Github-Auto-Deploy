@@ -94,10 +94,7 @@ class GitAutoDeploy(BaseHTTPRequestHandler):
                     if branch is None or branch == self.branch:
                         if(not self.quiet):
                             print 'Executing deploy command'
-                        call(['cd "' + path + '" && ' + repository['deploy']], shell=True)
-                        output=$(call(['cd "' + path + '" && ' + repository['deploy']], shell=True))
-                        echo 'output is $output'
-                        echo output
+                        call(['cd "' + path + '" && git pull'], shell=True)  ## This is a massive hack to just drop "git pull" in!
                         print 'Deploy command done'
                         
                     elif not self.quiet:
@@ -121,7 +118,7 @@ def main():
             os.setsid()
 
         if(not GitAutoDeploy.quiet):
-            print 'Github Autodeploy Service v0.2 started'
+            print 'Github Autodeploy Service v0.2 started 1'
         else:
             print 'Github Autodeploy Service v 0.2 started in daemon mode'
              
