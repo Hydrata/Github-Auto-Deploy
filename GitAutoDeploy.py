@@ -94,7 +94,7 @@ class GitAutoDeploy(BaseHTTPRequestHandler):
                     if branch is None or branch == self.branch:
                         if(not self.quiet):
                             print 'Executing deploy command'
-                        call(['cd "' + path + '" && git pull'], shell=True)  ## This is a massive hack to just drop "git pull" in!
+                        call(['cd "' + path + '" && git pull && sudo /etc/init.d/celeryd restart'], shell=True)  ## This is a massive hack to just drop "git pull" in!
                         print 'Deploy command done'
                         
                     elif not self.quiet:
