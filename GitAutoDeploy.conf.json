@@ -3,7 +3,7 @@
 	"repositories": 
 	[{
 		"url": "https://github.com/Hydrata/ChennaiFloodModel", 
-		"path": "/home/ubuntu/anuganode/tasks/",
+		"path": "/home/ubuntu/anuganode/tasks/ChennaiFloodModel",
 		"deploy": "sudo /etc/init.d/celeryd restart"
 	}]
 }
